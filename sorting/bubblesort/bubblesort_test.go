@@ -17,16 +17,37 @@ func TestBubbleSort(t *testing.T) {
 		{
 			name: "should sort",
 			args: args{
-				numbers: []int{9, 5, 1, 4, 2, 8},
+				numbers: []int{2, 3, 1},
 			},
-			want: []int{1, 2, 4, 5, 8, 9},
+			want: []int{1, 2, 3},
 		},
 		{
-			name: "should sort",
+			name: "should sort 2",
 			args: args{
-				numbers: []int{0, 5, 1, 4},
+				numbers: []int{1, 0},
 			},
-			want: []int{0, 1, 4, 5},
+			want: []int{0, 1},
+		},
+		{
+			name: "should sort 3",
+			args: args{
+				numbers: []int{0, 1},
+			},
+			want: []int{0, 1},
+		},
+		{
+			name: "should sort 4",
+			args: args{
+				numbers: []int{1, 1},
+			},
+			want: []int{1, 1},
+		},
+		{
+			name: "should sort 5",
+			args: args{
+				numbers: []int{},
+			},
+			want: []int{},
 		},
 	}
 	for _, tt := range tests {

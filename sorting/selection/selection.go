@@ -13,9 +13,7 @@ func Sort(numbers []int) []int {
 		}
 
 		if numbers[i] > numbers[min] {
-			temporary := numbers[i]
-			numbers[i] = numbers[min]
-			numbers[min] = temporary
+			numbers[i], numbers[min] = numbers[min], numbers[i]
 		}
 	}
 

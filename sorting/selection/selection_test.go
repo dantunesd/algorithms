@@ -17,9 +17,37 @@ func TestSort(t *testing.T) {
 		{
 			name: "should sort",
 			args: args{
-				numbers: []int{64, 25, 12, 22, 11},
+				numbers: []int{2, 3, 1},
 			},
-			want: []int{11, 12, 22, 25, 64},
+			want: []int{1, 2, 3},
+		},
+		{
+			name: "should sort 2",
+			args: args{
+				numbers: []int{1, 0},
+			},
+			want: []int{0, 1},
+		},
+		{
+			name: "should sort 3",
+			args: args{
+				numbers: []int{0, 1},
+			},
+			want: []int{0, 1},
+		},
+		{
+			name: "should sort 4",
+			args: args{
+				numbers: []int{1, 1},
+			},
+			want: []int{1, 1},
+		},
+		{
+			name: "should sort 5",
+			args: args{
+				numbers: []int{},
+			},
+			want: []int{},
 		},
 	}
 	for _, tt := range tests {
