@@ -29,7 +29,7 @@ func TestSearch(t *testing.T) {
 				list:  []int{10, 20, 30, 40, 50},
 			},
 			want:      -1,
-			wantLoops: 0,
+			wantLoops: 5,
 		},
 		{
 			name: "should find index",
